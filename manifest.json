@@ -1,0 +1,27 @@
+{
+  "name": "JioSaavn Downloader",
+  "description": "Now is the time so save your Data",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "background":{
+    
+  },
+  "browser_action": {
+    "default_title": "JioSaavn Downloader",
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.jiosaavn.com/*"],
+      "js": ["addScript.js"]
+    }
+  ], 
+  "icons": { "16": "logo.svg",
+    "48": "logo.svg",
+   "128": "logo.svg" },
+
+  "manifest_version": 2
+}

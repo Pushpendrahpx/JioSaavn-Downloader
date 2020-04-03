@@ -3,7 +3,7 @@ You can use this Extension by Installing by getting copy of this repo and Instal
 
 ## Steps of Installation of Chrome Extension
 1. Download this Repository Files in Folder in your local Computer
-2. Now Go to chrome://extensions in Chrome Browser and Turn on Developer Mode, As this Extension is not in Chrome WebStore, so Alternate Method is Required
+2. Now Go to ``` chrome://extensions ``` in Chrome Browser and Turn on Developer Mode, As this Extension is not in Chrome WebStore, so Alternate Method is Required
 3. Click on Load Unpacked and Select the Folder in which The Above Contains Exists.
 4. Now it Works Fine in your browser, just go to https://www.jiosaavn.com and Pick a song to Download.
 

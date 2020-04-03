@@ -4,17 +4,16 @@ var SONG_URLS = [];
 
 
 async function postData(url, data) {
-    // Default options are marked with *
     const response = await fetch(url,
         { body:data, 
           headers:{ 'Content-type':'application/x-www-form-urlencoded'}
-          ,method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            mode: 'cors', // no-cors, *cors, same-origin
-            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: 'same-origin', // include, *same-origin, omi
-            redirect: 'follow', // manual, *follow, error
+          ,method: 'POST', 
+            mode: 'cors',
+            cache: 'no-cache',
+            credentials: 'same-origin',
+            redirect: 'follow',
         })
-    return await response.json(); // parses JSON response into native JavaScript objects
+    return await response.json(); 
   }
   
 

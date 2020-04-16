@@ -1,7 +1,7 @@
 {
   "name": "JioSaavn Downloader",
   "description": "Now is the time so save your Data",
-  "version": "1.0",
+  "version": "2.0",
   "permissions": [
     "activeTab"
   ],
@@ -15,7 +15,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.jiosaavn.com/*"],
+      "matches": ["https://www.jiosaavn.com/"],
       "js": ["addScript.js"]
     }
   ], 

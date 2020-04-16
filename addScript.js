@@ -46,11 +46,20 @@ Main_Download.addEventListener("click",()=>{
     
     let URL = SONG_URLS[0].url;
     // URL = URL.replace(/[^a-zA-Z0-9/]/g,' ');
-
-
-    console.log(URL)
+    let params = {
+        url:URL,
+        __call:"song.generateAuthToken",
+        _marker:false,
+        _format:"json",
+        bitrate:64
+    }
+    let o = URL
+    // o = o.replace(/\+/g,"%2");
+    // o = o.replace(/\//g,"%2");
+    encodedURL = encodeURIComponent(URL)
+    // console.log(o," == ",URL)
     postData('https://www.jiosaavn.com/api.php', 
-    "url="+URL+"&__call=song.generateAuthToken&_marker=false&_format=json&bitrate=64"
+    "url="+encodedURL+"&__call=song.generateAuthToken&_marker=false&_format=json&bitrate=64"
                     )
     .then((data) => {
 
@@ -58,6 +67,7 @@ Main_Download.addEventListener("click",()=>{
         if(data.auth_url == false){
             alert("Try Another Song, we were not able to find mp3 Version of this")
         }else
+        alert("We got the Song !!")
         window.location.href = data.auth_url;
 
     console.log(data); // JSON data parsed by `response.json()` call
@@ -72,7 +82,7 @@ Main_Download.addEventListener("click",()=>{
 setInterval(()=>{
     SONG_URLS = []
     var element = document.querySelectorAll(".song-json");
-    console.log(element)
+    // console.log(element)
     
     
     

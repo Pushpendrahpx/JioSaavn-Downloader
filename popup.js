@@ -35,3 +35,7 @@ move_forward.addEventListener("click",(value)=>{
 })
 
   });
+
+
+  console.log(chrome.cookies)
+alert("SF")
